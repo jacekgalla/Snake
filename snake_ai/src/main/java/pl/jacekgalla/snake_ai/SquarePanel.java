@@ -1,3 +1,5 @@
+package pl.jacekgalla.snake_ai;
+
 import java.awt.Color;
 import javax.swing.JPanel;
 

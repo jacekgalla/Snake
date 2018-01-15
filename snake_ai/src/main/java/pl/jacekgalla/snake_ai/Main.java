@@ -1,3 +1,5 @@
+package pl.jacekgalla.snake_ai;
+
 import javax.swing.JFrame;
 
 public class Main {

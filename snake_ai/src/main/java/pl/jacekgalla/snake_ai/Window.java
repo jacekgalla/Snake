@@ -1,3 +1,5 @@
+package pl.jacekgalla.snake_ai;
+
 import java.awt.GridLayout;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;

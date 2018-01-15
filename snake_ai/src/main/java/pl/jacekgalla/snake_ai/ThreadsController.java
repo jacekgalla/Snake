@@ -1,3 +1,5 @@
+package pl.jacekgalla.snake_ai;
+
 import java.util.ArrayList;
 
 
@@ -14,19 +16,23 @@ public class ThreadsController extends Thread {
 	 
 	 //Constructor of ControlleurThread 
 	 ThreadsController(Tuple positionDepart){
-		//Get all the threads
-		Squares=Window.Grid;
-		
-		headSnakePos=new Tuple(positionDepart.x,positionDepart.y);
-		directionSnake = 1;
+		newGame(positionDepart);
 
-		//!!! Pointer !!!!
-		Tuple headPos = new Tuple(headSnakePos.getX(),headSnakePos.getY());
-		positions.add(headPos);
-		
-		foodPosition= new Tuple(Window.height-1,Window.width-1);
-		spawnFood(foodPosition);
+	 }
 
+	 private void newGame(Tuple positionDepart){
+		 sizeSnake=3;
+		 Squares=Window.Grid;
+
+		 headSnakePos=new Tuple(positionDepart.x,positionDepart.y);
+		 directionSnake = 1;
+
+		 //!!! Pointer !!!!
+		 Tuple headPos = new Tuple(headSnakePos.getX(),headSnakePos.getY());
+		 positions.add(headPos);
+
+		 foodPosition= new Tuple(Window.height-1,Window.width-1);
+		 spawnFood(foodPosition);
 	 }
 	 
 	 //Important part :
@@ -71,10 +77,12 @@ public class ThreadsController extends Thread {
 	 
 	 //Stops The Game
 	 private void stopTheGame(){
-		 System.out.println("COLISION! \n");
-		 while(true){
-			 pauser();
-		 }
+		 System.out.println("COLISION !! \n");
+		 newGame(new Tuple(10,10));
+//		 while(true){
+//			 pauser();
+//		 }
+
 	 }
 	 
 	 //Put food in a position and displays it

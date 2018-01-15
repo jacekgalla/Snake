@@ -1,3 +1,5 @@
+package pl.jacekgalla.snake_ai;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
